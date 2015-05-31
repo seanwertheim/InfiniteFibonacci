@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00714C841B17ABBB002F33ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00714C831B17ABBB002F33ED /* main.m */; };
+		00714C871B17ABBB002F33ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00714C861B17ABBB002F33ED /* AppDelegate.m */; };
+		00714C8F1B17ABBB002F33ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00714C8E1B17ABBB002F33ED /* Images.xcassets */; };
+		00714C9E1B17ABBB002F33ED /* InfiniteFibonacciTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00714C9D1B17ABBB002F33ED /* InfiniteFibonacciTests.m */; };
+		00714CAA1B17AF49002F33ED /* FibonacciGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00714CA91B17AF49002F33ED /* FibonacciGenerator.m */; };
+		00A5DF5A1B17C70E00752B3A /* InfiniteFibonacciTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5DF591B17C70E00752B3A /* InfiniteFibonacciTableViewController.m */; };
+		00A5DF5D1B17CAA000752B3A /* FibonacciNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5DF5C1B17CAA000752B3A /* FibonacciNumberTableViewCell.m */; };
+		5688EE95E0519A264F90D9C8 /* libPods-InfiniteFibonacci.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B54D5F3606DD3957B93DA617 /* libPods-InfiniteFibonacci.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00714C981B17ABBB002F33ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00714C761B17ABBB002F33ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00714C7D1B17ABBB002F33ED;
+			remoteInfo = InfiniteFibonacci;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00714C7E1B17ABBB002F33ED /* InfiniteFibonacci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteFibonacci.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00714C821B17ABBB002F33ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00714C831B17ABBB002F33ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00714C851B17ABBB002F33ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		00714C861B17ABBB002F33ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		00714C8E1B17ABBB002F33ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		00714C971B17ABBB002F33ED /* InfiniteFibonacciTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteFibonacciTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00714C9C1B17ABBB002F33ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00714C9D1B17ABBB002F33ED /* InfiniteFibonacciTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfiniteFibonacciTests.m; sourceTree = "<group>"; };
+		00714CA81B17AF49002F33ED /* FibonacciGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FibonacciGenerator.h; sourceTree = "<group>"; };
+		00714CA91B17AF49002F33ED /* FibonacciGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FibonacciGenerator.m; sourceTree = "<group>"; };
+		00A5DF581B17C70E00752B3A /* InfiniteFibonacciTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteFibonacciTableViewController.h; sourceTree = "<group>"; };
+		00A5DF591B17C70E00752B3A /* InfiniteFibonacciTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteFibonacciTableViewController.m; sourceTree = "<group>"; };
+		00A5DF5B1B17CAA000752B3A /* FibonacciNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FibonacciNumberTableViewCell.h; sourceTree = "<group>"; };
+		00A5DF5C1B17CAA000752B3A /* FibonacciNumberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FibonacciNumberTableViewCell.m; sourceTree = "<group>"; };
+		90E811915D52C451A6EFD0DE /* Pods-InfiniteFibonacci.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteFibonacci.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteFibonacci/Pods-InfiniteFibonacci.release.xcconfig"; sourceTree = "<group>"; };
+		B54D5F3606DD3957B93DA617 /* libPods-InfiniteFibonacci.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteFibonacci.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C5511116EDF8FC319B1C98 /* Pods-InfiniteFibonacci.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteFibonacci.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteFibonacci/Pods-InfiniteFibonacci.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00714C7B1B17ABBB002F33ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5688EE95E0519A264F90D9C8 /* libPods-InfiniteFibonacci.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00714C941B17ABBB002F33ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00714C751B17ABBB002F33ED = {
+			isa = PBXGroup;
+			children = (
+				00714C801B17ABBB002F33ED /* InfiniteFibonacci */,
+				00714C9A1B17ABBB002F33ED /* InfiniteFibonacciTests */,
+				00714C7F1B17ABBB002F33ED /* Products */,
+				231D63CADCA68FEFD27489EB /* Pods */,
+				AFE4A6EB59BDB96B3667415F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		00714C7F1B17ABBB002F33ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00714C7E1B17ABBB002F33ED /* InfiniteFibonacci.app */,
+				00714C971B17ABBB002F33ED /* InfiniteFibonacciTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00714C801B17ABBB002F33ED /* InfiniteFibonacci */ = {
+			isa = PBXGroup;
+			children = (
+				00A5DF571B17C6F700752B3A /* Controller */,
+				00A5DF561B17C6EA00752B3A /* View */,
+				00714CA71B17AF31002F33ED /* Helper */,
+				00714C851B17ABBB002F33ED /* AppDelegate.h */,
+				00714C861B17ABBB002F33ED /* AppDelegate.m */,
+				00714C8E1B17ABBB002F33ED /* Images.xcassets */,
+				00714C811B17ABBB002F33ED /* Supporting Files */,
+			);
+			path = InfiniteFibonacci;
+			sourceTree = "<group>";
+		};
+		00714C811B17ABBB002F33ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00714C821B17ABBB002F33ED /* Info.plist */,
+				00714C831B17ABBB002F33ED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00714C9A1B17ABBB002F33ED /* InfiniteFibonacciTests */ = {
+			isa = PBXGroup;
+			children = (
+				00714C9D1B17ABBB002F33ED /* InfiniteFibonacciTests.m */,
+				00714C9B1B17ABBB002F33ED /* Supporting Files */,
+			);
+			path = InfiniteFibonacciTests;
+			sourceTree = "<group>";
+		};
+		00714C9B1B17ABBB002F33ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00714C9C1B17ABBB002F33ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00714CA71B17AF31002F33ED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				00714CA81B17AF49002F33ED /* FibonacciGenerator.h */,
+				00714CA91B17AF49002F33ED /* FibonacciGenerator.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		00A5DF561B17C6EA00752B3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00A5DF5B1B17CAA000752B3A /* FibonacciNumberTableViewCell.h */,
+				00A5DF5C1B17CAA000752B3A /* FibonacciNumberTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		00A5DF571B17C6F700752B3A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00A5DF581B17C70E00752B3A /* InfiniteFibonacciTableViewController.h */,
+				00A5DF591B17C70E00752B3A /* InfiniteFibonacciTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		231D63CADCA68FEFD27489EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4C5511116EDF8FC319B1C98 /* Pods-InfiniteFibonacci.debug.xcconfig */,
+				90E811915D52C451A6EFD0DE /* Pods-InfiniteFibonacci.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFE4A6EB59BDB96B3667415F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B54D5F3606DD3957B93DA617 /* libPods-InfiniteFibonacci.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00714C7D1B17ABBB002F33ED /* InfiniteFibonacci */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00714CA11B17ABBB002F33ED /* Build configuration list for PBXNativeTarget "InfiniteFibonacci" */;
+			buildPhases = (
+				079ECBF4620959AC70FAFF84 /* Check Pods Manifest.lock */,
+				00714C7A1B17ABBB002F33ED /* Sources */,
+				00714C7B1B17ABBB002F33ED /* Frameworks */,
+				00714C7C1B17ABBB002F33ED /* Resources */,
+				C673DFFB9D970B68E7CCFD6A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InfiniteFibonacci;
+			productName = InfiniteFibonacci;
+			productReference = 00714C7E1B17ABBB002F33ED /* InfiniteFibonacci.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00714C961B17ABBB002F33ED /* InfiniteFibonacciTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00714CA41B17ABBB002F33ED /* Build configuration list for PBXNativeTarget "InfiniteFibonacciTests" */;
+			buildPhases = (
+				00714C931B17ABBB002F33ED /* Sources */,
+				00714C941B17ABBB002F33ED /* Frameworks */,
+				00714C951B17ABBB002F33ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00714C991B17ABBB002F33ED /* PBXTargetDependency */,
+			);
+			name = InfiniteFibonacciTests;
+			productName = InfiniteFibonacciTests;
+			productReference = 00714C971B17ABBB002F33ED /* InfiniteFibonacciTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00714C761B17ABBB002F33ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Sean Wertheim";
+				TargetAttributes = {
+					00714C7D1B17ABBB002F33ED = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					00714C961B17ABBB002F33ED = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 00714C7D1B17ABBB002F33ED;
+					};
+				};
+			};
+			buildConfigurationList = 00714C791B17ABBB002F33ED /* Build configuration list for PBXProject "InfiniteFibonacci" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00714C751B17ABBB002F33ED;
+			productRefGroup = 00714C7F1B17ABBB002F33ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00714C7D1B17ABBB002F33ED /* InfiniteFibonacci */,
+				00714C961B17ABBB002F33ED /* InfiniteFibonacciTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00714C7C1B17ABBB002F33ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00714C8F1B17ABBB002F33ED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00714C951B17ABBB002F33ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		079ECBF4620959AC70FAFF84 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C673DFFB9D970B68E7CCFD6A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteFibonacci/Pods-InfiniteFibonacci-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00714C7A1B17ABBB002F33ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A5DF5A1B17C70E00752B3A /* InfiniteFibonacciTableViewController.m in Sources */,
+				00A5DF5D1B17CAA000752B3A /* FibonacciNumberTableViewCell.m in Sources */,
+				00714CAA1B17AF49002F33ED /* FibonacciGenerator.m in Sources */,
+				00714C871B17ABBB002F33ED /* AppDelegate.m in Sources */,
+				00714C841B17ABBB002F33ED /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00714C931B17ABBB002F33ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00714C9E1B17ABBB002F33ED /* InfiniteFibonacciTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00714C991B17ABBB002F33ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00714C7D1B17ABBB002F33ED /* InfiniteFibonacci */;
+			targetProxy = 00714C981B17ABBB002F33ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00714C9F1B17ABBB002F33ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		00714CA01B17ABBB002F33ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00714CA21B17ABBB002F33ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4C5511116EDF8FC319B1C98 /* Pods-InfiniteFibonacci.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = InfiniteFibonacci/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00714CA31B17ABBB002F33ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E811915D52C451A6EFD0DE /* Pods-InfiniteFibonacci.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = InfiniteFibonacci/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		00714CA51B17ABBB002F33ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InfiniteFibonacciTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteFibonacci.app/InfiniteFibonacci";
+			};
+			name = Debug;
+		};
+		00714CA61B17ABBB002F33ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InfiniteFibonacciTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfiniteFibonacci.app/InfiniteFibonacci";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00714C791B17ABBB002F33ED /* Build configuration list for PBXProject "InfiniteFibonacci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00714C9F1B17ABBB002F33ED /* Debug */,
+				00714CA01B17ABBB002F33ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00714CA11B17ABBB002F33ED /* Build configuration list for PBXNativeTarget "InfiniteFibonacci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00714CA21B17ABBB002F33ED /* Debug */,
+				00714CA31B17ABBB002F33ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00714CA41B17ABBB002F33ED /* Build configuration list for PBXNativeTarget "InfiniteFibonacciTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00714CA51B17ABBB002F33ED /* Debug */,
+				00714CA61B17ABBB002F33ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00714C761B17ABBB002F33ED /* Project object */;
+}

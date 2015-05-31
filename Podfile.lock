@@ -1,0 +1,10 @@
+PODS:
+  - JKBigInteger (0.0.1)
+
+DEPENDENCIES:
+  - JKBigInteger
+
+SPEC CHECKSUMS:
+  JKBigInteger: 7f3894ca331bf271a8e2ee0d5329707ca6eda6e0
+
+COCOAPODS: 0.36.4
