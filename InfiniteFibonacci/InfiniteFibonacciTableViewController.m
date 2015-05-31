@@ -11,7 +11,7 @@
 #import "FibonacciNumberTableViewCell.h"
 #import <JKBigInteger/JKBigInteger.h>
 
-static const NSUInteger PRELOAD_THRESHOLD = 30;
+static const NSUInteger kPreloadThreshold = 30;
 
 @interface InfiniteFibonacciTableViewController () <FibonacciGeneratorDelegate>
 
@@ -24,46 +24,38 @@ static const NSUInteger PRELOAD_THRESHOLD = 30;
 
 #pragma mark - View Lifecycle methods
 
--(void)viewDidLoad{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = NSLocalizedString(@"Infinite Fibonacci TableView", @"navigation item title");
-    self.navigationController.navigationBar.tintColor = [UIColor greenColor];
+    self.navigationItem.title = NSLocalizedString(@"Infinite Fibonacci TableView", @"main tableview navigation item title");
     
     self.numberList = [NSArray new];
     
     self.fibonacciGenerator = [FibonacciGenerator new];
     self.fibonacciGenerator.delegate = self;
+    [self.fibonacciGenerator generateNextPage];
     
     [self.tableView registerClass:[FibonacciNumberTableViewCell class] forCellReuseIdentifier:[FibonacciNumberTableViewCell reuseIdentifier]];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.fibonacciGenerator generateNextPage];
 }
 
 #pragma mark - UITableViewDataSource methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    JKBigInteger * number = [self.numberList objectAtIndex:indexPath.row];
-    FibonacciNumberTableViewCell * cell = [FibonacciNumberTableViewCell cellWithNumberString:[number stringValue]];
-    
-    return cell;
+    JKBigInteger *number = [self.numberList objectAtIndex:indexPath.row];
+    return [FibonacciNumberTableViewCell cellWithNumberString:[number stringValue]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.numberList.count;
 }
 
 #pragma mark - UITableViewDelegate methods
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     return [FibonacciNumberTableViewCell height];
 }
+
+#pragma mark - UIScrollViewDelegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if ([self shouldGenerateNextPage]) {
@@ -71,14 +63,18 @@ static const NSUInteger PRELOAD_THRESHOLD = 30;
     }
 }
 
--(BOOL)shouldGenerateNextPage{
+#pragma mark - Private Helpers
+
+- (BOOL)shouldGenerateNextPage {
+    BOOL shouldGenerate = NO;
+    
     for (NSIndexPath *indexPath in [self.tableView indexPathsForVisibleRows]) {
-        if (indexPath.row >= [self.numberList count] - PRELOAD_THRESHOLD) {
-            return YES;
+        if (indexPath.row >= [self.numberList count] - kPreloadThreshold) {
+            shouldGenerate = YES;
         }
     }
     
-    return NO;
+    return shouldGenerate;
 }
 
 #pragma mark - FibonacciGeneratorDelegate methods

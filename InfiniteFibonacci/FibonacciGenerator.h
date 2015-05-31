@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @protocol FibonacciGeneratorDelegate <NSObject>
-
+@required
 - (void)fibonacciNumbersDidGenerate:(NSArray *)numbers;
-
 @end
 
 @interface FibonacciGenerator : NSObject
 
-@property (nonatomic, weak) id<FibonacciGeneratorDelegate> delegate;
 
 - (void)generateNextPage;
+
+@property (nonatomic, weak) id<FibonacciGeneratorDelegate> delegate;
 
 @end

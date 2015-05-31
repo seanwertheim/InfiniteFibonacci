@@ -8,22 +8,25 @@
 
 #import "FibonacciNumberTableViewCell.h"
 
-@interface FibonacciNumberTableViewCell ()
-
-@end
+static const UITableViewCellStyle kCellStyle = UITableViewCellStyleDefault;
 
 @implementation FibonacciNumberTableViewCell
 
-+(instancetype)cellWithNumberString:(NSString*)fibonacciNumber{
-    FibonacciNumberTableViewCell *cell = [[FibonacciNumberTableViewCell alloc] initWithStyle:[FibonacciNumberTableViewCell cellStyle] reuseIdentifier:[FibonacciNumberTableViewCell reuseIdentifier]];
+#pragma mark - Initializers
+
++ (instancetype)cellWithNumberString:(NSString *)fibonacciNumber {
+    FibonacciNumberTableViewCell *cell = ({
+        FibonacciNumberTableViewCell *cell = [[FibonacciNumberTableViewCell alloc] initWithStyle:kCellStyle reuseIdentifier:[self reuseIdentifier]];
+        cell.textLabel.text = fibonacciNumber;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        cell;
+    });
     
-    cell.textLabel.text = fibonacciNumber;
-    cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
     return cell;
 }
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
@@ -33,18 +36,14 @@
     return self;
 }
 
-+(NSString*)reuseIdentifier{
+#pragma mark - TableView Datasource Helpers
+
++ (NSString *)reuseIdentifier {
     return NSStringFromClass([self class]);
 }
 
-+ (UITableViewCellStyle)cellStyle {
-    return UITableViewCellStyleDefault;
-}
-
-+(CGFloat)height{
++ (CGFloat)height {
     return 40;
 }
-
-
 
 @end

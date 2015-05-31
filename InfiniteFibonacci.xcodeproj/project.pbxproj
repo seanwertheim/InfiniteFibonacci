@@ -14,6 +14,7 @@
 		00714CAA1B17AF49002F33ED /* FibonacciGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00714CA91B17AF49002F33ED /* FibonacciGenerator.m */; };
 		00A5DF5A1B17C70E00752B3A /* InfiniteFibonacciTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5DF591B17C70E00752B3A /* InfiniteFibonacciTableViewController.m */; };
 		00A5DF5D1B17CAA000752B3A /* FibonacciNumberTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5DF5C1B17CAA000752B3A /* FibonacciNumberTableViewCell.m */; };
+		00F52E4A1B1BB79500052CD1 /* UIColor+Fibonacci.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F52E491B1BB79500052CD1 /* UIColor+Fibonacci.m */; };
 		5688EE95E0519A264F90D9C8 /* libPods-InfiniteFibonacci.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B54D5F3606DD3957B93DA617 /* libPods-InfiniteFibonacci.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		00A5DF591B17C70E00752B3A /* InfiniteFibonacciTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteFibonacciTableViewController.m; sourceTree = "<group>"; };
 		00A5DF5B1B17CAA000752B3A /* FibonacciNumberTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FibonacciNumberTableViewCell.h; sourceTree = "<group>"; };
 		00A5DF5C1B17CAA000752B3A /* FibonacciNumberTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FibonacciNumberTableViewCell.m; sourceTree = "<group>"; };
+		00F52E481B1BB79500052CD1 /* UIColor+Fibonacci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Fibonacci.h"; sourceTree = "<group>"; };
+		00F52E491B1BB79500052CD1 /* UIColor+Fibonacci.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Fibonacci.m"; sourceTree = "<group>"; };
 		90E811915D52C451A6EFD0DE /* Pods-InfiniteFibonacci.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteFibonacci.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteFibonacci/Pods-InfiniteFibonacci.release.xcconfig"; sourceTree = "<group>"; };
 		B54D5F3606DD3957B93DA617 /* libPods-InfiniteFibonacci.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteFibonacci.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C5511116EDF8FC319B1C98 /* Pods-InfiniteFibonacci.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteFibonacci.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteFibonacci/Pods-InfiniteFibonacci.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 			children = (
 				00714CA81B17AF49002F33ED /* FibonacciGenerator.h */,
 				00714CA91B17AF49002F33ED /* FibonacciGenerator.m */,
+				00F52E481B1BB79500052CD1 /* UIColor+Fibonacci.h */,
+				00F52E491B1BB79500052CD1 /* UIColor+Fibonacci.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F52E4A1B1BB79500052CD1 /* UIColor+Fibonacci.m in Sources */,
 				00A5DF5A1B17C70E00752B3A /* InfiniteFibonacciTableViewController.m in Sources */,
 				00A5DF5D1B17CAA000752B3A /* FibonacciNumberTableViewCell.m in Sources */,
 				00714CAA1B17AF49002F33ED /* FibonacciGenerator.m in Sources */,

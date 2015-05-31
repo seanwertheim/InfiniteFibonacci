@@ -10,9 +10,13 @@
 
 @interface FibonacciNumberTableViewCell : UITableViewCell
 
-+ (NSString *)reuseIdentifier;
-+ (UITableViewCellStyle)cellStyle;
-+ (CGFloat)height;
+#pragma mark - Initializers
+
 + (instancetype)cellWithNumberString:(NSString*)fibonacciNumber;
+
+#pragma mark - TableView Datasource Helpers
+
++ (NSString *)reuseIdentifier;
++ (CGFloat)height;
 
 @end

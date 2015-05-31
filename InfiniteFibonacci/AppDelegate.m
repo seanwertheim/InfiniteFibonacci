@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "InfiniteFibonacciTableViewController.h"
+#import "UIColor+Fibonacci.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupWindow];
-    
+    [UINavigationBar appearance].barTintColor = [UIColor fibonacciGreen];
     return YES;
 }
 

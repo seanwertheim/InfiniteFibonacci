@@ -9,7 +9,7 @@
 #import "FibonacciGenerator.h"
 #import <JKBigInteger/JKBigInteger.h>
 
-static const NSUInteger PAGE_LENGTH = 50;
+static const NSUInteger kPageLength = 50;
 
 @interface FibonacciGenerator ()
 
@@ -24,7 +24,7 @@ static const NSUInteger PAGE_LENGTH = 50;
 
 @implementation FibonacciGenerator
 
--(instancetype)init{
+- (instancetype)init {
     self = [super init];
     
     if (self) {
@@ -37,7 +37,7 @@ static const NSUInteger PAGE_LENGTH = 50;
     return self;
 }
 
--(void)generateNewFibonacciPageWithOffset:(NSUInteger)offset{
+- (void)generateNewFibonacciPageWithOffset:(NSUInteger)offset {
     __weak typeof (self) weakSelf = self;
     
     dispatch_async(self.fibQueue, ^{
@@ -50,23 +50,23 @@ static const NSUInteger PAGE_LENGTH = 50;
         dispatch_async(dispatch_get_main_queue(), ^{ //needs to be called on main thread so delegate can update ui
             if ([strongSelf.delegate respondsToSelector:@selector(fibonacciNumbersDidGenerate:)]) {
                 [strongSelf.delegate fibonacciNumbersDidGenerate:strongSelf.lastPage];
-            }
+            }           
         });
     });
 }
 
--(NSArray*)newFibonacciPageWithOffset:(NSUInteger)offset{
+- (NSArray *)newFibonacciPageWithOffset:(NSUInteger)offset {
     NSUInteger startIndex;
     NSUInteger endIndex;
     
-    NSMutableArray *newPage = [[NSMutableArray alloc] initWithCapacity:PAGE_LENGTH];
+    NSMutableArray *newPage = [[NSMutableArray alloc] initWithCapacity:kPageLength];
     
     JKBigInteger *first;
     JKBigInteger *second;
     
     if (offset == 0) {
         startIndex = 0;
-        endIndex = PAGE_LENGTH;
+        endIndex = kPageLength;
         
         first = [[JKBigInteger alloc] initWithUnsignedLong:0];
         second = [[JKBigInteger alloc] initWithUnsignedLong:1];
@@ -74,18 +74,18 @@ static const NSUInteger PAGE_LENGTH = 50;
         [newPage addObjectsFromArray:@[first, second]];
     } else {
         startIndex = offset - 1;
-        endIndex = startIndex + PAGE_LENGTH;
+        endIndex = startIndex + kPageLength;
         
         NSUInteger secondToLastIndex = [self.allGeneratedNumbers count] - 2;
-        JKBigInteger *secondToLastGenerated = (JKBigInteger*) self.allGeneratedNumbers[secondToLastIndex];
-        JKBigInteger *lastGenerated = (JKBigInteger*) [self.allGeneratedNumbers lastObject];
+        JKBigInteger *secondToLastGenerated = (JKBigInteger *)self.allGeneratedNumbers[secondToLastIndex];
+        JKBigInteger *lastGenerated = (JKBigInteger *)[self.allGeneratedNumbers lastObject];
         
         first = secondToLastGenerated;
         second = lastGenerated;
     }
     
     for (; startIndex < endIndex; startIndex++) {
-        JKBigInteger * fN = [first add:second];
+        JKBigInteger *fN = [first add:second];
         first = second;
         second = fN;
         
@@ -95,16 +95,16 @@ static const NSUInteger PAGE_LENGTH = 50;
     return newPage;
 }
 
--(void)cacheNewPage:(NSArray*)newPage{
+- (void)cacheNewPage:(NSArray*)newPage {
     self.allGeneratedNumbers = [self.allGeneratedNumbers arrayByAddingObjectsFromArray:newPage];
     self.lastPage = newPage;
     self.currentOffset = self.allGeneratedNumbers.count;
 }
 
-- (void)generateNextPage{
-        NSLog(@"\nGenerating next page.\n");
-        
-        [self generateNewFibonacciPageWithOffset:self.currentOffset];
+- (void)generateNextPage {
+    NSLog(@"\nGenerating next page.\n");
+    
+    [self generateNewFibonacciPageWithOffset:self.currentOffset];
 }
 
 @end
