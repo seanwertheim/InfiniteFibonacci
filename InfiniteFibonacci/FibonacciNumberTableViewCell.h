@@ -7,16 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JKBigInteger/JKBigInteger.h>
 
 @interface FibonacciNumberTableViewCell : UITableViewCell
 
 #pragma mark - Initializers
 
-+ (instancetype)cellWithNumberString:(NSString*)fibonacciNumber;
+/**
+ *  Initializes a cell with a given Fibonacci number.  The cell's label line breaks by character wrapping.
+ *
+ *  @param fibonacciNumber The number the cell displays.
+ *
+ *  @return an initialized cell with the given Fibonacci number
+ */
++ (instancetype)cellWithNumberString:(JKBigInteger *)fibonacciNumber;
 
 #pragma mark - TableView Datasource Helpers
 
+/**
+ *  The cell's reuse identifier.
+ *
+ *  @return the reuse identifier.
+ */
 + (NSString *)reuseIdentifier;
-+ (CGFloat)height;
+
+/**
+ *  The cell's estimated height.
+ *
+ *  @return the estimated height.
+ */
++ (CGFloat)estimatedHeight;
 
 @end

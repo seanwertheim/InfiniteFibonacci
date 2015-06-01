@@ -10,6 +10,11 @@
 
 @interface UIColor (Fibonacci)
 
+/**
+ *  The green color used for the navigation bar of the app
+ *
+ *  @return A UIColor with the correct RGB values
+ */
 + (UIColor *)fibonacciGreen;
 
 @end

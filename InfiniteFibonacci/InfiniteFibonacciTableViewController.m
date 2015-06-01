@@ -35,6 +35,7 @@ static const NSUInteger kPreloadThreshold = 30;
     self.fibonacciGenerator.delegate = self;
     [self.fibonacciGenerator generateNextPage];
     
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 20, 0, 20);
     [self.tableView registerClass:[FibonacciNumberTableViewCell class] forCellReuseIdentifier:[FibonacciNumberTableViewCell reuseIdentifier]];
 }
 
@@ -42,7 +43,7 @@ static const NSUInteger kPreloadThreshold = 30;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JKBigInteger *number = [self.numberList objectAtIndex:indexPath.row];
-    return [FibonacciNumberTableViewCell cellWithNumberString:[number stringValue]];
+    return [FibonacciNumberTableViewCell cellWithNumberString:number];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -52,7 +53,7 @@ static const NSUInteger kPreloadThreshold = 30;
 #pragma mark - UITableViewDelegate methods
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [FibonacciNumberTableViewCell height];
+    return [FibonacciNumberTableViewCell estimatedHeight];
 }
 
 #pragma mark - UIScrollViewDelegate methods

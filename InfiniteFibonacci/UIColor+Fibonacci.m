@@ -11,7 +11,7 @@
 @implementation UIColor (Fibonacci)
 
 + (UIColor *)fibonacciGreen {
-    return [UIColor colorWithRed:55/255.f green:131/255.f blue:56.f/255.f alpha:1];
+    return [UIColor colorWithRed:0.055 green:0.640 blue:0.272 alpha:0.890];
 }
 
 @end

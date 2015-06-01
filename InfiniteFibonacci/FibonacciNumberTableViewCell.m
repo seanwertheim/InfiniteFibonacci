@@ -14,10 +14,11 @@ static const UITableViewCellStyle kCellStyle = UITableViewCellStyleDefault;
 
 #pragma mark - Initializers
 
-+ (instancetype)cellWithNumberString:(NSString *)fibonacciNumber {
++ (instancetype)cellWithNumberString:(JKBigInteger *)fibonacciNumber {
     FibonacciNumberTableViewCell *cell = ({
         FibonacciNumberTableViewCell *cell = [[FibonacciNumberTableViewCell alloc] initWithStyle:kCellStyle reuseIdentifier:[self reuseIdentifier]];
-        cell.textLabel.text = fibonacciNumber;
+        cell.textLabel.text = [fibonacciNumber stringValue];
+        cell.textLabel.font = [UIFont fontWithName:@"Avenir-Heavy" size:14];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
         cell;
@@ -31,6 +32,7 @@ static const UITableViewCellStyle kCellStyle = UITableViewCellStyleDefault;
     
     if (self) {
         self.textLabel.textAlignment = NSTextAlignmentCenter;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return self;
@@ -42,7 +44,7 @@ static const UITableViewCellStyle kCellStyle = UITableViewCellStyleDefault;
     return NSStringFromClass([self class]);
 }
 
-+ (CGFloat)height {
++ (CGFloat)estimatedHeight {
     return 40;
 }
 

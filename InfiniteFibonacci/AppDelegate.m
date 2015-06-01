@@ -20,7 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupWindow];
+    
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [UINavigationBar appearance].barTintColor = [UIColor fibonacciGreen];
+    [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName:[UIFont fontWithName:@"Avenir-Light" size:20],
+                                                         NSForegroundColorAttributeName:[UIColor whiteColor]};
     return YES;
 }
 
